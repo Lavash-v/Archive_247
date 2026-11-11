@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Archive_247.AdminPanelScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource BgColor}">
+
+    <Grid>
+        <StackPanel Margin="40,40,0,0" VerticalAlignment="Top">
+
+            <TextBlock Text="ADMIN ACCESS" Style="{StaticResource TerminalText}" FontSize="32" Margin="0,0,0,30"/>
+
+            <StackPanel x:Name="AuthPanel" Orientation="Horizontal" Margin="0,0,0,30">
+                <TextBlock Text="Enter admin password: " Style="{StaticResource TerminalText}" VerticalAlignment="Center"/>
+                <PasswordBox x:Name="AdminPasswordBox" Width="200" Height="30" FontSize="20" Background="Transparent" Foreground="White" BorderBrush="White" PasswordChar="*"/>
+                <Button Content="[ LOGIN ]" Style="{StaticResource TerminalLinkButton}" Margin="20,0,0,0" Click="LoginBtn_Click"/>
+            </StackPanel>
+
+            <TextBlock x:Name="ErrorMsg" Text="ACCESS DENIED" FontFamily="{StaticResource TerminalFont}" Visibility="Collapsed" Margin="0,0,0,20"/>
+
+            <StackPanel x:Name="ControlPanel" Visibility="Collapsed">
+                <TextBlock Text="ВОССТАНОВЛЕНИЕ ДОСТУПА К КАМЕРАМ:" Style="{StaticResource TerminalText}" FontSize="18" Margin="0,0,0,10"/>
+
+                <WrapPanel x:Name="RestoreButtonsPanel">
+                </WrapPanel>
+            </StackPanel>
+
+            <Button x:Name="BtnExit" Content=">>> exit" Style="{StaticResource TerminalLinkButton}" Margin="0,40,0,0" Click="ExitBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

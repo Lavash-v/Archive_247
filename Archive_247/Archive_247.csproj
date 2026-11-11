@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="font\vcrosdmonorusbyd.ttf" />
+    <None Remove="images\vintage vhs GIF by rotomangler.gif" />
+    <None Remove="images\План _ Камеры.png" />
+    <None Remove="sounds\camera_click.mp3" />
+    <None Remove="sounds\camera_click.wav" />
+    <None Remove="sounds\camera_hover.mp3" />
+    <None Remove="sounds\camera_hover.wav" />
+    <None Remove="sounds\console_click.mp3" />
+    <None Remove="sounds\console_click.wav" />
+    <None Remove="sounds\console_hover.mp3" />
+    <None Remove="sounds\console_hover.wav" />
+    <None Remove="sounds\shum.mp3" />
+    <None Remove="sounds\staticheskiy-tv-shum-2.mp3" />
+    <None Remove="videos\CAM_01.mp4" />
+    <None Remove="videos\CAM_02.mp4" />
+    <None Remove="videos\CAM_03.mp4" />
+    <None Remove="videos\CAM_04.mp4" />
+    <None Remove="videos\CAM_05.mp4" />
+    <None Remove="videos\CAM_06.mp4" />
+    <None Remove="videos\CAM_07.mp4" />
+    <None Remove="videos\CAM_08.mp4" />
+    <None Remove="videos\CAM_09.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="sounds\camera_click.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\camera_hover.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\console_click.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\console_hover.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\shum.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_01.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_02.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_03.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_04.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_05.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_06.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_07.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_08.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="videos\CAM_09.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="font\vcrosdmonorusbyd.ttf" />
+    <Resource Include="images\vintage vhs GIF by rotomangler.gif" />
+    <Resource Include="images\План _ Камеры.png" />
+  </ItemGroup>
+
+</Project>

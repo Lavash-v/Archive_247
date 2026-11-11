@@ -1,0 +1,90 @@
+﻿<Application x:Class="Archive_247.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Archive_247"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <!-- Цветовая палитра -->
+        <SolidColorBrush x:Key="BgColor" Color="#293133"/>
+        <SolidColorBrush x:Key="TextColor" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="BtnBgColor" Color="#656565"/>
+
+        <!-- Шрифт -->
+        <FontFamily x:Key="TerminalFont">/font/#VCROSDMonoRUSbyD</FontFamily>
+
+        <!-- Базовый стиль для текста терминала -->
+        <Style TargetType="TextBlock" x:Key="TerminalText">
+            <Setter Property="FontFamily" Value="{StaticResource TerminalFont}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+
+        <!-- Стиль для кнопок-ссылок -->
+        <Style TargetType="Button" x:Key="TerminalLinkButton">
+            <Setter Property="FontFamily" Value="{StaticResource TerminalFont}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#AAAAAA"/>
+                </Trigger>
+            </Style.Triggers>
+            
+        </Style>
+
+        <!-- Стиль для текстовых полей ввода -->
+        <Style TargetType="TextBox" x:Key="TerminalTextBox">
+            <Setter Property="FontFamily" Value="{StaticResource TerminalFont}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="CaretBrush" Value="{StaticResource TextColor}"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Стиль для кнопок-камер на карте -->
+        <Style TargetType="Button" x:Key="CameraButton">
+            <Setter Property="Background" Value="{StaticResource BtnBgColor}"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+            <Setter Property="FontFamily" Value="{StaticResource TerminalFont}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="37"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{StaticResource TextColor}" BorderThickness="1">
+                            <Grid>
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Text="CAM" FontSize="8" HorizontalAlignment="Left" Foreground="{TemplateBinding Foreground}"/>
+                                    <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" Foreground="{TemplateBinding Foreground}" FontWeight="Bold"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <!-- Эффект при наведении мыши -->
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#888888"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
